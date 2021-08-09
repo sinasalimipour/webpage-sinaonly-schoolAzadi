@@ -280,13 +280,19 @@ button:focus{
 
 .top-header .navbar{
 	padding: 15px 0px;
+	font-family: 'B Homa' !important;
+	background: beige;
+	
 }
 
 .top-header .navbar .navbar-collapse ul li a{
-	padding: 19px 15px;
-	text-transform: uppercase;
-	font-size: 18px;
+    padding: 9px 24px;
+    text-transform: uppercase;
+    font-size: 17px;
+    font-family: 'B Homa' !important;
+    background-color: #00640000;
 }
+
 
 .top-header .navbar .navbar-collapse ul li a.active{
 	background: #09480f;
@@ -550,6 +556,7 @@ button:focus{
 .main-timeline-box .time-line-date-content .mbr-timeline-date{
 	background: #c58d07;
 	color: #ffffff;
+	text-align: right;
 }
 .main-timeline-box .reverse .time-line-date-content .mbr-timeline-date{
 	background: #0c15a6;
@@ -605,7 +612,7 @@ button:focus{
 -------------------------------------------------------------------*/
 
 .gallery-box{
-	padding: 70px 0px;
+	padding: 100px 100px;
 }
 
 .gallery-box ul{}

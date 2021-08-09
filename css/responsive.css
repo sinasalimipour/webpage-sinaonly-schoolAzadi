@@ -3,6 +3,7 @@
 /* only small tablets */
 @media (min-width: 768px) and (max-width: 991px) {
 	.top-header .navbar .navbar-collapse ul li a{
+	    text-align: right;
 		padding: 5px 15px;
 	}
 	.about-img{
@@ -20,6 +21,7 @@
 		margin-left: 15px;
 	}
 	.top-header .navbar .navbar-collapse ul li a{
+		text-align: right;
 		padding: 5px 15px;
 	}
 	.lbox-details h1{

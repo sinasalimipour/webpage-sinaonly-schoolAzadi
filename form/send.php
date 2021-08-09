@@ -57,8 +57,12 @@ if (isset($_POST['stu_code']) && isset($_POST['stu_name'])) {
    $stu_base = validate($_POST['stu_base']);
    $stu_major = validate($_POST['stu_major']);
 
-
-
+	
+	//add اولویت بندی و معدل انظبات سه سال قبل ۷و۸و۹
+    $stu_x1 = validate($_POST['stu_x1']);
+    $stu_disciplinegrade7 = validate($_POST['stu_disciplinegrade7']);
+	$stu_disciplinegrade8 = validate($_POST['stu_disciplinegrade8']);
+	$stu_disciplinegrade9 = validate($_POST['stu_disciplinegrade9']);
 
 
 
@@ -66,13 +70,15 @@ if (isset($_POST['stu_code']) && isset($_POST['stu_name'])) {
 		header("Location: index.html");
 	}else {
 
-		$sql ="INSERT INTO users(stu_code, stu_name, stu_name1, stu_telh, stu_age, stu_name2, stu_phone2,stu_phone1,stu_phone, stu_base, stu_major , stu_job , stu_job1 , stu_degree , stu_degree1 , stu_x , stu_address , stu_school , stu_numclass , stu_numclass1 ) VALUES($stu_code', '$stu_name', '$stu_name1', '$stu_telh', '$stu_age', '$stu_name2','$stu_phone', '$stu_phone1', '$stu_phone2' , '$stu_job','$stu_job1','$stu_degree1','$stu_degree' , '$stu_x', '$stu_address','$stu_school','$stu_numclass','$stu_numclass1', '$stu_base', '$stu_major')";
+		$sql ="INSERT INTO users(stu_code , stu_name ,stu_name1,stu_name2,stu_phone,stu_phone1,stu_phone2,stu_job,stu_job1,stu_degree,stu_degree1,stu_numclass,stu_numclass1,stu_school,stu_telh,stu_age,stu_x,stu_address,stu_base,stu_major,stu_x1,stu_disciplinegrade7,stu_disciplinegrade8,stu_disciplinegrade9) VALUES('$stu_code','$stu_name','$stu_name1','$stu_name2','$stu_phone','$stu_phone1','$stu_phone2','$stu_job','$stu_job1','$stu_degree','$stu_degree1','$stu_numclass','$stu_numclass1','$stu_school','$stu_telh','$stu_age','$stu_x','$stu_address','$stu_base','$stu_major','$stu_x1','$stu_disciplinegrade7','$stu_disciplinegrade8','$stu_disciplinegrade9')";
+
+
 		$res = mysqli_query($conn, $sql);
 
 		if ($res) {
 			echo "<h1><a href=https://www.azadeschool3.ir/>ثبت شد برو به سایت اصلی</a></h1>";
 		}else {
-			echo "<h1>پیام ارسال نشد لطفا دوباره امتحان کنید</h1>";
+			echo "<h1>پیام ارسال نشد لطفا تمام جا ها خالی رو پر کنید</h1>";
 		}
 	}
 
